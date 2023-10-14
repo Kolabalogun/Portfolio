@@ -1,8 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .center {
+    @apply max-w-7xl mx-auto;
+  }
+  .flexallcenter {
+    @apply flex items-center justify-center;
+  }
+}
 
 * {
   margin: 0;
@@ -11,5 +20,150 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Syne", sans-serif;
+  font-size: 59px;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("assets/bg.jpg");
+  height: 90vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.linked,
+.projectlink {
+  position: relative;
+  display: inline-block;
+}
+
+.linked::before,
+.projectlink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0d1727;
+  border-radius: 4px;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.25s;
+}
+.linked:hover::before,
+.projectlink:hover:before {
+  scale: 1;
+}
+
+.projectlink::before {
+  background-color: #777af2;
+  transition: scale 0.85s;
+}
+
+/* Mouuse  CSS */
+.mouse {
+  width: 28px;
+  height: 50px;
+  border: 2px solid #1e266d;
+  border-radius: 20px;
+  display: inline-flex;
+}
+.mouse-wheel {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #1e266d;
+  border-radius: 50%;
+  margin: auto;
+  animation: moveWheel 1.25s linear infinite;
+}
+@keyframes moveWheel {
+  0% {
+    opacity: 0;
+    translate: 0 16px;
+  }
+
+  100% {
+    opacity: 1;
+    translate: 0 -16px;
+  }
+}
+
+/* waves  */
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(assets/wave6.png);
+  background-size: 1000px 100px;
+}
+
+.wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+.wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+.wave.wave3 {
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 30px;
+}
+
+.wave.wave4 {
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 50px;
+}
+
+.skills-container {
+  transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as desired */
+  display: flex;
+  align-items: center;
+}
+
+.skills-container button {
+  cursor: pointer;
 }
