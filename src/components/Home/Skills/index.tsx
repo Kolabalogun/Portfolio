@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HTML from "../../../assets/html5-brands.svg";
 import CSS from "../../../assets/css3-alt-brands.svg";
 import JS from "../../../assets/js-brands.svg";
