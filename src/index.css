@@ -6,7 +6,7 @@
 
 @layer base {
   .center {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-5 xl:px-0;
   }
   .flexallcenter {
     @apply flex items-center justify-center;
@@ -31,7 +31,7 @@ button {
 
 h1 {
   font-family: "Syne", sans-serif;
-  font-size: 59px;
+  /* font-size: 59px; */
   font-weight: 700;
 }
 
@@ -201,11 +201,16 @@ h1 {
 
 .footer-icn {
   background-color: #ffffff;
-
   width: 40px;
   height: 40px;
   margin-left: 20px;
   border-radius: 44%;
   border: 1px solid black;
   padding: 7px;
+}
+
+@media (max-width: 767px) {
+  .contact-section ul li:nth-child(2) {
+    border-left: none;
+  }
 }

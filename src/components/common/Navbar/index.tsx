@@ -10,7 +10,7 @@ const Navbar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <nav>
-      <div className=" center py-10 flex items-center justify-between">
+      <div className="  center py-10 flex items-center justify-between">
         <a href="/" className="h-12">
           <img src={Logo} alt="Logo" className="h-full" />
         </a>
@@ -38,22 +38,22 @@ const Navbar = () => {
             className="rounded-full bg-secondary-500 p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <Bars3Icon className="h-6 w-6 text-white" />
+            <Bars3Icon className="h-10 w-10 text-black" />
           </button>
         )}
       </div>
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-[100000000000000px] h-full w-[300px] bg-[#eee] drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+              <XMarkIcon className="h-10 w-10" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="ml-5 flex flex-col gap-10 text-2xl">
             {NavLinks.map(({ title, link }, idx) => (
               <Link
                 key={idx}

@@ -6,8 +6,8 @@ const Hero = () => {
     <div className="hero">
       <Navbar />
 
-      <div className="center h-[70vh] gap-20 flexallcenter flex-col text-center ">
-        <h1 className="text-primary ">
+      <div className="center min-h-[70vh] gap-20 flexallcenter flex-col text-center ">
+        <h1 className="text-primary text-[45px] sm:text-[50px] lg:text-[59px] ">
           Hello, I'm Ibrahim, <br /> A Front-End and Mobile{" "}
           <span className="text-secondary">Developer</span>.
         </h1>

@@ -18,12 +18,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact min-h-[105vh] md:min-h-[80vh]" id="contact">
       <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-h-[40vh] z-30  ">
-        <h1 className="text-[45px] text-primary text-center mb-2">
+        <h1 className="text-4xl md:text-[45px] text-primary text-center mb-6">
           Have a new project?{" "}
           <span
-            className={`text-[45px] text-primary transform transition-transform ease-in-out duration-500 ${
+            className={` text-primary transform transition-transform ease-in-out duration-500 ${
               animationIndex > 0 ? "translate-y-0" : "translate-y-10"
             }`}
           >
@@ -35,7 +35,7 @@ const Contact = () => {
           looking for a developer or just want to connect
         </p>
 
-        <div className="contact-section mt-10 mb-20">
+        <div className="contact-section md:mt-10 md:mb-20 ">
           <ul className="flexallcenter flex-col md:flex-row p-[30px] text-center">
             <li>
               <span className="">Email:</span>
@@ -66,8 +66,8 @@ const Contact = () => {
 
         <div className="h-[1px] w-full bg-[#000]"></div>
 
-        <footer className="flex items-center justify-between mt-20 mb-10">
-          <div className="left">
+        <footer className="flex  flex-col md:flex-row gap-10 md:gap-0 items-center justify-between mt-20 mb-10">
+          <div className="text-center md:text-start">
             <p>&copy; Copyright MyPortfolio. All Rights Reserved.</p>
             <br />
             <p>

@@ -79,9 +79,9 @@ const Skills = () => {
 
       {/* Mobile  */}
 
-      <div className="grid grid-cols-2 gap-10 md:hidden">
-        {visibleImages.map((image, index) => (
-          <div className="text-center">
+      <div className="grid grid-cols-2 gap-10 px-5 md:hidden">
+        {images.map((image, index) => (
+          <div className="flex flex-col items-center justify-center">
             <img
               key={index}
               src={image.img}
