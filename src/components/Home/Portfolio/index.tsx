@@ -51,7 +51,7 @@ const Portfolio = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-16 place-content-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 place-content-center">
           {filteredProjects.map((project, idx) => (
             <Link key={idx} to={project.link} className="">
               <div className="projectlink w-full h-[400px] hover:scale-95 transition-transform duration-300 ease-in-out">

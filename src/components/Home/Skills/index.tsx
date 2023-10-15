@@ -48,7 +48,7 @@ const Skills = () => {
         </p>
       </div>
 
-      <div className="flex gap-10 justify-between  skills-container">
+      <div className=" hidden md:flex gap-10 justify-between  items-center  skills-container">
         <button
           className="py-3 px-5 rounded bg-[#eee]"
           onClick={handleClickPrev}
@@ -75,6 +75,23 @@ const Skills = () => {
         >
           Next &gt;
         </button>
+      </div>
+
+      {/* Mobile  */}
+
+      <div className="grid grid-cols-2 gap-10 md:hidden">
+        {visibleImages.map((image, index) => (
+          <div className="text-center">
+            <img
+              key={index}
+              src={image.img}
+              alt={`Skill ${index}`}
+              className="h-20"
+            />
+
+            <p className="mt-2 font-medium">{image.name}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

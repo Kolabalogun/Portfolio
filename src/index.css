@@ -24,6 +24,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+button {
+  cursor: pointer;
+  font-family: "Syne", sans-serif;
+}
+
 h1 {
   font-family: "Syne", sans-serif;
   font-size: 59px;
@@ -158,12 +163,49 @@ h1 {
   bottom: 50px;
 }
 
-.skills-container {
-  transition: transform 0.3s ease-in-out; /* Adjust the duration and easing as desired */
-  display: flex;
-  align-items: center;
+.about-btn {
+  letter-spacing: 0.5px;
+  margin: 30px 0 0;
+  padding: 15px 35px;
+
+  background-color: #1e266d;
+  color: #f4f4fd;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border: 1px solid #1e266d;
+  cursor: pointer;
+  font-family: "Syne", sans-serif;
 }
 
-.skills-container button {
-  cursor: pointer;
+.about-btn:hover {
+  background-color: #f4f4fd;
+  color: #1e266d;
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+/* Contact  */
+
+.contact-section ul li {
+  list-style: none;
+  padding: 20px;
+  width: 280px;
+  font-size: 16px;
+}
+
+.contact-section ul li:nth-child(2) {
+  border-left: 1px solid #1e266d;
+}
+
+/* Footer  */
+
+.footer-icn {
+  background-color: #ffffff;
+
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  border-radius: 44%;
+  border: 1px solid black;
+  padding: 7px;
 }
