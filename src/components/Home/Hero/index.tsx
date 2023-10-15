@@ -3,7 +3,7 @@ import Navbar from "../../common/Navbar";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <Navbar />
 
       <div className="center min-h-[70vh] gap-10 md:gap-20 flexallcenter flex-col text-center ">
@@ -14,7 +14,7 @@ const Hero = () => {
 
         <Link
           activeClass="active"
-          to="note"
+          to="about"
           spy={true}
           smooth={true}
           offset={-80}

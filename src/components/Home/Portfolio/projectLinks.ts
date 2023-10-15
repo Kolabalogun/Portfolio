@@ -19,44 +19,44 @@ type ProjectLinksProps = {
 export const ProjectLinks: ProjectLinksProps[] = [
   {
     title: "Unilorin League App",
-    link: "/",
+    link: "https://play.google.com/store/apps/details?id=com.ibrahimdevv.UnilorinLeague",
     type: "mobile",
     img: Unilorin,
   },
   {
     title: "Aisha Bankole",
-    link: "/",
+    link: "https://aisha-banks.netlify.app/",
     type: "web",
     img: Aisha,
   },
   {
     title: "Afrogrids",
-    link: "/",
+    link: "https://afrogrids.com/",
     type: "web",
     img: Afrogrid,
   },
   {
     title: "Faji Tobiloba",
-    link: "/",
+    link: "https://thefajitobiloba.com/",
     type: "web",
     img: Faji,
   },
 
   {
     title: "Fents Luxury Hotel",
-    link: "/",
+    link: "https://fentsluxuryhotel.netlify.app/",
     type: "web",
     img: Fent,
   },
   {
     title: "Lauretta Banks",
-    link: "/",
+    link: "https://lauretta.netlify.app/",
     type: "web",
     img: Lauretta,
   },
   {
     title: "Quiz App",
-    link: "/",
+    link: "https://drive.google.com/file/d/1cDx2co0_Wa8UCyWXhyfgp22NwBB2io-r/view",
     type: "mobile",
     img: Quiz,
   },
@@ -68,13 +68,13 @@ export const ProjectLinks: ProjectLinksProps[] = [
   },
   {
     title: "Adventours with Aisha",
-    link: "/",
+    link: "https://adventourswithaisha.wordpress.com/",
     type: "web",
     img: Adven,
   },
   {
     title: "Jumai Yahaya Blog",
-    link: "/",
+    link: "https://yahayajumai.web.app/#/",
     type: "web",
     img: Jumai,
   },

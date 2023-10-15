@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
-    <nav>
+    <nav className="z-50">
       <div className="  center py-5 md:py-10 flex items-center justify-between">
         <a href="/" className="h-10 md:h-12">
           <img src={Logo} alt="Logo" className="h-full" />
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-[999px] h-full w-[300px] bg-[#eee] drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-[1001] h-full w-[300px] bg-[#eee] drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

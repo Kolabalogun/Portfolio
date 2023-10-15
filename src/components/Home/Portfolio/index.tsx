@@ -53,7 +53,7 @@ const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 place-content-center">
           {filteredProjects.map((project, idx) => (
-            <Link key={idx} to={project.link} className="">
+            <a key={idx} href={project.link} className="">
               <div className="projectlink w-full h-[400px] hover:scale-95 transition-transform duration-300 ease-in-out">
                 <img
                   src={project.img}
@@ -72,7 +72,7 @@ const Portfolio = () => {
                   {project.title}
                 </Link>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

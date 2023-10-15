@@ -6,18 +6,18 @@ type NavLinksProps = {
 export const NavLinks: NavLinksProps[] = [
   {
     title: "Home",
-    link: "/",
+    link: "home",
   },
   {
     title: "About",
-    link: "/",
+    link: "about",
   },
   {
     title: "Portfolio",
-    link: "/",
+    link: "portfolio",
   },
   {
     title: "Contact",
-    link: "/",
+    link: "contact",
   },
 ];
