@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 bottom-0 z-[100000000000000px] h-full w-[300px] bg-[#eee] drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-[999px] h-full w-[300px] bg-[#eee] drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

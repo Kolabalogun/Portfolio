@@ -12,14 +12,16 @@ const Contact = () => {
       setAnimationIndex((prevIndex) =>
         prevIndex === messages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="contact min-h-[145vh] md:min-h-[80vh]" id="contact">
-      <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-h-[40vh] z-30  ">
+    <section className="contact " id="contact">
+      <Particles />
+
+      <div className="center my-32  z-30 ">
         <h1 className="text-4xl md:text-[45px] text-primary text-center mb-6">
           Have a new project?{" "}
           <span
@@ -87,8 +89,6 @@ const Contact = () => {
           </div>
         </footer>
       </div>
-
-      <Particles />
     </section>
   );
 };
