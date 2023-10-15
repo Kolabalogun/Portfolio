@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ProjectLinks } from "./projectLinks";
+
+import { useGlobalContext } from "../../../context/useGlobalContext";
 
 const Portfolio = () => {
+  const { projectsFromDB } = useGlobalContext();
+
   const [selectedType, setSelectedType] = useState("All");
 
   const filterProjects = (type: string) => {
@@ -11,8 +13,8 @@ const Portfolio = () => {
 
   const filteredProjects =
     selectedType === "All"
-      ? ProjectLinks
-      : ProjectLinks.filter((project) => project.type === selectedType);
+      ? projectsFromDB
+      : projectsFromDB?.filter((project) => project?.type === selectedType);
 
   return (
     <section className="bg-secondarybg -mt-4" id="portfolio">
@@ -52,25 +54,32 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 place-content-center">
-          {filteredProjects.map((project, idx) => (
-            <a key={idx} href={project.link} className="">
+          {filteredProjects?.map((project, idx) => (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              key={idx}
+              href={project?.projectLink}
+            >
               <div className="projectlink w-full h-[400px] hover:scale-95 transition-transform duration-300 ease-in-out">
                 <img
-                  src={project.img}
+                  src={project?.imgUrl}
                   alt="quiz project"
                   className="h-full w-full object-cover"
                 />
               </div>
 
-              <div className="">
-                <Link
-                  to="/"
+              <div>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={project?.projectLink}
                   className={
                     "text-lg font-medium projectlink cursor-pointer py-2 my-3 text-primary hover:text-secondary"
                   }
                 >
-                  {project.title}
-                </Link>
+                  {project?.projectName}
+                </a>
               </div>
             </a>
           ))}

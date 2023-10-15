@@ -57,13 +57,8 @@ const Skills = () => {
           &lt; Prev
         </button>
         {visibleImages.map((image, index) => (
-          <div className="text-center">
-            <img
-              key={index}
-              src={image.img}
-              alt={`Skill ${index}`}
-              className="h-20"
-            />
+          <div key={index} className="text-center">
+            <img src={image.img} alt={`Skill ${index}`} className="h-20" />
 
             <p className="mt-2 font-medium">{image.name}</p>
           </div>
@@ -81,7 +76,10 @@ const Skills = () => {
 
       <div className="grid grid-cols-2 gap-10 px-5 md:hidden">
         {images.map((image, index) => (
-          <div className="flex flex-col items-center justify-center">
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center"
+          >
             <img
               key={index}
               src={image.img}

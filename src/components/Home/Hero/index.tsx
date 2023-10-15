@@ -1,7 +1,44 @@
 import { Link } from "react-scroll";
 import Navbar from "../../common/Navbar";
+import { useGlobalContext } from "../../../context/useGlobalContext";
+import {
+  collection,
+  doc,
+  serverTimestamp,
+  updateDoc,
+} from "firebase/firestore";
+import { db } from "../../../utils/Firebase";
+import { useEffect } from "react";
 
 const Hero = () => {
+  const { viewsCount } = useGlobalContext();
+
+  const runTransactions = async () => {
+    const collectionRef = collection(db, "pageViews");
+    const docRef = doc(collectionRef, "homepage");
+
+    if (viewsCount) {
+      const updatedCount = {
+        count: viewsCount.count + 1,
+      };
+      try {
+        await updateDoc(docRef, {
+          ...updatedCount,
+          updatedAt: serverTimestamp(),
+        });
+        // console.log("Updated Count");
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    runTransactions();
+  }, []);
+
   return (
     <div className="hero" id="home">
       <Navbar />
