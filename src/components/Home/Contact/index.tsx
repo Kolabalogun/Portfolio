@@ -18,7 +18,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="contact min-h-[105vh] md:min-h-[80vh]" id="contact">
+    <section className="contact min-h-[145vh] md:min-h-[80vh]" id="contact">
       <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-h-[40vh] z-30  ">
         <h1 className="text-4xl md:text-[45px] text-primary text-center mb-6">
           Have a new project?{" "}

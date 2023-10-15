@@ -37,7 +37,7 @@ h1 {
 
 .hero {
   background-image: url("assets/bg.jpg");
-  height: 90vh;
+  min-height: 110vh;
   background-repeat: no-repeat;
   overflow: hidden;
   width: 100%;

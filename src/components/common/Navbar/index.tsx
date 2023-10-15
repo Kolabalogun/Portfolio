@@ -10,8 +10,8 @@ const Navbar = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   return (
     <nav>
-      <div className="  center py-10 flex items-center justify-between">
-        <a href="/" className="h-12">
+      <div className="  center py-5 md:py-10 flex items-center justify-between">
+        <a href="/" className="h-10 md:h-12">
           <img src={Logo} alt="Logo" className="h-full" />
         </a>
         {isAboveMediumScreens ? (
@@ -38,7 +38,7 @@ const Navbar = () => {
             className="rounded-full bg-secondary-500 p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <Bars3Icon className="h-10 w-10 text-black" />
+            <Bars3Icon className="h-9 w-9 md:h-10 md:w-10 text-black" />
           </button>
         )}
       </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-              <XMarkIcon className="h-10 w-10" />
+              <XMarkIcon className="h-9 w-9 md:h-10 md:w-10" />
             </button>
           </div>
 
