@@ -65,7 +65,7 @@ const Portfolio = () => {
                 <img
                   src={project?.imgUrl}
                   alt="quiz project"
-                  className="h-full w-full md:object-cover object-contain"
+                  className="h-full w-full object-cover"
                 />
               </div>
 
