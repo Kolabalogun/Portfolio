@@ -23,6 +23,7 @@ const ProjectDetails: React.FC = () => {
     setloading(true);
     id && getBlogDetails();
     setpageType("project");
+    window.scroll(0, 0);
   }, [id]);
 
   const getBlogDetails = async () => {
