@@ -17,6 +17,7 @@ export type ProjectFromDBProps = {
   projectName: string;
   client: string;
   projectLink: string;
+  gitHubLink: string;
   imgUrl: string;
   type: string;
   resourceI: string;

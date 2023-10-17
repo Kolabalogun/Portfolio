@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Contact from "../../components/Home/Contact";
 import Navbar from "../../components/common/Navbar";
+import Github from "../../assets/githubw.svg";
 
 import { Link, useParams } from "react-router-dom";
 import {
@@ -117,9 +118,24 @@ const ProjectDetails: React.FC = () => {
         </div>
 
         <div className="line"></div>
-        <div className="flexallcenter my-10 ">
+        <div className="flexallcenter md:flex-row flex-col gap-5 md:gap-10 my-10 ">
           <a href={form?.projectLink} target="_blank" rel="noopener noreferrer">
-            <button className="about-btn">View Project</button>
+            <button className="about-btn min-w-[280px]">View Project</button>
+          </a>
+
+          <a
+            href={form?.gitHubLink}
+            className=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              style={{ backgroundColor: "black", color: "white" }}
+              className="about-btn flex gap-4 items-center min-w-[280px] justify-center"
+            >
+              <img src={Github} alt="" className="h-6" />
+              Github Repo
+            </button>
           </a>
         </div>
         <div className="line"></div>
