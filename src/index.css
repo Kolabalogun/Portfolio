@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: #fff !important;
+  background-color: #ffffff !important;
   font-family: "Poppins", sans-serif;
 }
 
@@ -266,6 +266,6 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #fff !important;
+    background-color: #ffffff !important;
   }
 }
