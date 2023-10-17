@@ -21,7 +21,9 @@ const Portfolio = () => {
     <section className="bg-secondarybg -mt-4" id="portfolio">
       <div className="center py-16 md:py-40 px-5 sm:px-10 xl:px-0">
         <div className="mb-10">
-          <h1 className="text-primary text-5xl mb-5">Portfolio</h1>
+          <h1 className="text-primary dark:text-primary text-5xl mb-5">
+            Portfolio
+          </h1>
           <p className="text-[#445781] uppercase font-medium">
             These are my most recent projects.
           </p>
@@ -69,7 +71,7 @@ const Portfolio = () => {
                 <Link
                   to={`/project/${project?.id}`}
                   className={
-                    "text-lg font-medium projectlink cursor-pointer py-2 my-3 text-primary hover:text-secondary"
+                    "text-lg font-medium projectlink cursor-pointer py-2 my-3 text-primary dark:text-primary hover:text-secondary"
                   }
                 >
                   {project?.projectName}

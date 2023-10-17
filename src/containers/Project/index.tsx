@@ -48,12 +48,12 @@ const ProjectDetails: React.FC = () => {
 
       <div className="center">
         <div className="my-16  md:my-32 flexallcenter flex-col ">
-          <h1 className="text-primary text-[48px] md:text-[59px] text-center mb-4">
+          <h1 className="text-primary dark:text-primary text-[48px] md:text-[59px] text-center mb-4">
             {form?.projectName}
           </h1>
 
           <div className="flex">
-            <p className="font-medium text-sm md:text-base text-center text-primary">
+            <p className="font-medium text-sm md:text-base text-center text-primary dark:text-primary">
               <Link to={"/"}> Home {">"} Portfolio</Link> {">"}{" "}
               <span className="text-secondary cursor-pointer">
                 {form?.projectName}
@@ -160,7 +160,7 @@ const ProjectDetails: React.FC = () => {
                   />
                 </div>
 
-                <h1 className="text-primary text-lg md:text-xl">
+                <h1 className="text-primary dark:text-primary text-lg md:text-xl">
                   {project.projectName}
                 </h1>
 

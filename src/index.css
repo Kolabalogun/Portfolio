@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #fff !important;
   font-family: "Poppins", sans-serif;
 }
 
@@ -40,7 +40,6 @@ h1 {
 
 .hero {
   background-image: url("assets/bg.jpg");
-
   background-repeat: no-repeat;
   overflow: hidden;
   width: 100%;
@@ -260,5 +259,13 @@ h1 {
 @media (max-width: 767px) {
   .contact-section ul li:nth-child(2) {
     border-left: none;
+  }
+}
+
+/* dark mode  */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #fff !important;
   }
 }

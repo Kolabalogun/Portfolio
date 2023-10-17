@@ -22,10 +22,10 @@ const Contact = () => {
       <Particles />
 
       <div className="center my-32  z-30 ">
-        <h1 className="text-4xl md:text-[45px] text-primary text-center mb-6">
+        <h1 className="text-4xl md:text-[45px] text-primary dark:text-primary text-center mb-6">
           Have a new project?{" "}
           <span
-            className={` text-primary transform transition-transform ease-in-out duration-500 ${
+            className={` text-primary dark:text-primary transform transition-transform ease-in-out duration-500 ${
               animationIndex > 0 ? "translate-y-0" : "translate-y-10"
             }`}
           >
@@ -47,7 +47,9 @@ const Contact = () => {
                 className="text-[#445781]  text-center font-medium"
                 href="mailto:>akinola10302@gmail.com"
               >
-                <span className="text-primary">akinola10302@gmail.com</span>
+                <span className="text-primary dark:text-primary">
+                  akinola10302@gmail.com
+                </span>
               </a>
             </li>
 
@@ -60,7 +62,9 @@ const Contact = () => {
                 className="text-[#445781]  text-center font-medium"
                 href="tel:+2348073374150"
               >
-                <span className="text-primary">+2348073374150</span>
+                <span className="text-primary dark:text-primary">
+                  +2348073374150
+                </span>
               </a>
             </li>
           </ul>
@@ -74,7 +78,7 @@ const Contact = () => {
             <br />
             <p>
               Designed by{" "}
-              <a href="/" className="text-primary">
+              <a href="/" className="text-primary dark:text-primary">
                 Ibrahim
               </a>
             </p>

@@ -43,7 +43,9 @@ const Skills = () => {
   return (
     <section className="center pt-24 pb-32">
       <div className="text-center mb-16">
-        <h1 className="text-primary text-5xl mb-5">Resources</h1>
+        <h1 className="text-primary dark:text-primary text-5xl mb-5">
+          Resources
+        </h1>
         <p className="text-[#445781] uppercase font-medium">
           Here are all the skills I've learnt and use to develop web
           applications and software

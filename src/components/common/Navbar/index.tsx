@@ -40,7 +40,7 @@ const Navbar = () => {
                   }
                 }}
                 className={
-                  "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary  "
+                  "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary dark:text-primary  "
                 }
               >
                 {title}
@@ -78,7 +78,7 @@ const Navbar = () => {
                 offset={-80}
                 duration={800}
                 className={
-                  "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary  "
+                  "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary dark:text-primary  "
                 }
               >
                 {title}
