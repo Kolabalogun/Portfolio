@@ -122,21 +122,22 @@ const ProjectDetails: React.FC = () => {
           <a href={form?.projectLink} target="_blank" rel="noopener noreferrer">
             <button className="about-btn min-w-[280px]">View Project</button>
           </a>
-
-          <a
-            href={form?.gitHubLink}
-            className=""
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              style={{ backgroundColor: "black", color: "white" }}
-              className="about-btn flex gap-4 items-center min-w-[280px] justify-center"
+          {form?.gitHubLink && (
+            <a
+              href={form?.gitHubLink}
+              className=""
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <img src={Github} alt="" className="h-6" />
-              Github Repo
-            </button>
-          </a>
+              <button
+                style={{ backgroundColor: "black", color: "white" }}
+                className="about-btn flex gap-4 items-center min-w-[280px] justify-center"
+              >
+                <img src={Github} alt="" className="h-6" />
+                Github Repo
+              </button>
+            </a>
+          )}
         </div>
         <div className="line"></div>
 
