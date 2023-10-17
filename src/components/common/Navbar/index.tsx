@@ -34,13 +34,11 @@ const Navbar = () => {
                 smooth={true}
                 offset={-80}
                 duration={800}
-                onClick={
-                  title === "Home" && pageType !== "home"
-                    ? () => {
-                        navigate("/");
-                      }
-                    : ""
-                }
+                onClick={() => {
+                  if (title === "Home" && pageType !== "home") {
+                    navigate("/");
+                  }
+                }}
                 className={
                   "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary  "
                 }
