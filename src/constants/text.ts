@@ -3,7 +3,7 @@
 const ABOUT = {
   HEADING: "Hi, Ibrahim Again! Nice to meet you. Get to know me.",
   CAPTION:
-    "I'm passionate about the art of crafting web and mobile applications, I thrive on the creative journey from conception to realization. I'm a tenacious problem solver, committed to delivering results that meet your needs. My programming journey has led me to master technologies that power the digital realm. I've been fortunate to collaborate with industry veterans who've enriched my understanding of what makes a great web or software application. Discover more below, and let's connect to discuss your vision.",
+    "I'm a passionate web and mobile developer with a strong dedication to the entire development process, from design to implementation. If there's a challenge I can't initially tackle, I'm committed to finding the solution. My interest in programming has led me to acquire a diverse skill set in web and mobile technologies. I've had the privilege of working alongside experienced professionals who've raised my expectations for what every application should achieve. Please continue scrolling to discover more about my work, and don't hesitate to reach out.",
 };
 
 Object.freeze(ABOUT);
