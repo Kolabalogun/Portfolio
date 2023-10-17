@@ -13,11 +13,20 @@ type viewsCountProps = {
   count: number;
 };
 
-type ProjectFromDBProps = {
+export type ProjectFromDBProps = {
   projectName: string;
-  imgUrl: string;
+  client: string;
   projectLink: string;
+  imgUrl: string;
   type: string;
+  resourceI: string;
+  resourceII: string;
+  resourceIII: string;
+  projectIimage: string;
+  projectIIIimage: string;
+  projectIIimage: string;
+  Description: string;
+  id: string;
 };
 
 interface AppContextProps {
@@ -26,6 +35,8 @@ interface AppContextProps {
   projectsFromDB: ProjectFromDBProps[];
   projectsFromDBLoader: boolean;
   viewsCount: viewsCountProps | null;
+  pageType: string;
+  setpageType: React.Dispatch<React.SetStateAction<string>>;
 }
 
 interface AppProviderProps {
@@ -43,8 +54,6 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const { data: projectsFromDB, loader: projectsFromDBLoader } =
     useFirestoreCollection<ProjectFromDBProps>("Projects");
 
-  //   console.log(projectsFromDB);
-
   // get page count
   const [viewsCount, setViewsCount] = useState<viewsCountProps>({
     count: 0,
@@ -59,9 +68,11 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       }
       setloading(false);
     };
-
     getViewsCountDetail();
   }, []);
+
+  //loading state
+  const [pageType, setpageType] = useState<string>("home");
 
   if (projectsFromDBLoader || loading) return <Loader />;
 
@@ -70,10 +81,11 @@ const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
       value={{
         loading,
         setloading,
-
         projectsFromDB,
         projectsFromDBLoader,
         viewsCount,
+        pageType,
+        setpageType,
       }}
     >
       {children}

@@ -21,3 +21,14 @@ export const NavLinks: NavLinksProps[] = [
     link: "contact",
   },
 ];
+export const ProjectNavLinks: NavLinksProps[] = [
+  {
+    title: "Home",
+    link: "home",
+  },
+
+  {
+    title: "Contact",
+    link: "contact",
+  },
+];

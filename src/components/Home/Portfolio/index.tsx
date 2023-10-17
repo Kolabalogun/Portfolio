@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { useGlobalContext } from "../../../context/useGlobalContext";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const { projectsFromDB } = useGlobalContext();
@@ -55,12 +56,7 @@ const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 place-content-center">
           {filteredProjects?.map((project, idx) => (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              key={idx}
-              href={project?.projectLink}
-            >
+            <Link key={idx} to={`/project/${project?.id}`}>
               <div className="projectlink w-full h-[400px] hover:scale-95 transition-transform duration-300 ease-in-out">
                 <img
                   src={project?.imgUrl}
@@ -70,18 +66,16 @@ const Portfolio = () => {
               </div>
 
               <div>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={project?.projectLink}
+                <Link
+                  to={`/project/${project?.id}`}
                   className={
                     "text-lg font-medium projectlink cursor-pointer py-2 my-3 text-primary hover:text-secondary"
                   }
                 >
                   {project?.projectName}
-                </a>
+                </Link>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

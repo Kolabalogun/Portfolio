@@ -8,6 +8,7 @@ import Firebase from "../../../assets/firebase-seeklogo.com.svg";
 import Tailwind from "../../../assets/tailwind-css.svg";
 import Github from "../../../assets/github-brands.svg";
 import ReactNative from "../../../assets/reactnat.svg";
+// import StyledC from "../../../assets/styled-components.svg";
 
 const Skills = () => {
   const images = [
@@ -19,6 +20,7 @@ const Skills = () => {
     { img: ReactNative, name: "React Native" },
     { img: Firebase, name: "Firebase" },
     { img: Tailwind, name: "Tailwind" },
+    // { img: StyledC, name: "Styled Components" },
     { img: Github, name: "Github" },
   ];
 

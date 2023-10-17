@@ -11,7 +11,7 @@ import { db } from "../../../utils/Firebase";
 import { useEffect } from "react";
 
 const Hero = () => {
-  const { viewsCount } = useGlobalContext();
+  const { viewsCount, setpageType } = useGlobalContext();
 
   const runTransactions = async () => {
     const collectionRef = collection(db, "pageViews");
@@ -37,10 +37,11 @@ const Hero = () => {
 
   useEffect(() => {
     runTransactions();
+    setpageType("home");
   }, []);
 
   return (
-    <div className="hero" id="home">
+    <div className="hero min-h-[105vh] md:min-h-[100vh]" id="home">
       <Navbar />
 
       <div className="center min-h-[70vh] gap-10 md:gap-20 flexallcenter flex-col text-center ">

@@ -17,6 +17,7 @@ const About = () => {
             href="/folder/my_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            className="mt-[30px]"
           >
             <button className="about-btn">My Resume</button>
           </a>

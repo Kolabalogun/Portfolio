@@ -1,13 +1,22 @@
 import { useState } from "react";
 import Logo from "../../../assets/logo.png";
 import useMediaQuery from "../../../hook/useMediaQuery";
-import { NavLinks } from "./links";
+import { NavLinks, ProjectNavLinks } from "./links";
 import { Link } from "react-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { useGlobalContext } from "../../../context/useGlobalContext";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const { pageType } = useGlobalContext();
+
+  const navigate = useNavigate();
+
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+
+  const navs = pageType === "home" ? NavLinks : ProjectNavLinks;
+
   return (
     <nav className="z-50">
       <div className="  center py-5 md:py-10 flex items-center justify-between">
@@ -16,7 +25,7 @@ const Navbar = () => {
         </a>
         {isAboveMediumScreens ? (
           <div>
-            {NavLinks.map(({ title, link }, idx) => (
+            {navs.map(({ title, link }, idx) => (
               <Link
                 key={idx}
                 activeClass="active"
@@ -25,6 +34,13 @@ const Navbar = () => {
                 smooth={true}
                 offset={-80}
                 duration={800}
+                onClick={
+                  title === "Home" && pageType !== "home"
+                    ? () => {
+                        navigate("/");
+                      }
+                    : ""
+                }
                 className={
                   "text-base font-medium linked cursor-pointer py-2  mx-10 text-primary  "
                 }
@@ -54,7 +70,7 @@ const Navbar = () => {
 
           {/* MENU ITEMS */}
           <div className="ml-5 flex flex-col gap-10 text-2xl">
-            {NavLinks.map(({ title, link }, idx) => (
+            {navs.map(({ title, link }, idx) => (
               <Link
                 key={idx}
                 activeClass="active"
